@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "220143505893",
+    "project_id": "mingle-3bcc7",
+    "storage_bucket": "mingle-3bcc7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:220143505893:android:02ce6beab4d151e6655f0c",
+        "android_client_info": {
+          "package_name": "com.example.soulmate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "220143505893-jqb4lsfop4fv40p82jk4444nj3an2n1g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.soulmate",
+            "certificate_hash": "e7b32c082397ee1dc0be33267d9094b54643a91f"
+          }
+        },
+        {
+          "client_id": "220143505893-35iq27isd295ta1b1jgam3pcr1nj9ndd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABUbsNhByW82EFyjBcdnspwHpqGreM5Ck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "220143505893-35iq27isd295ta1b1jgam3pcr1nj9ndd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

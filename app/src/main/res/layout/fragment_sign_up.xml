@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".authfragment.SignUpFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
+            android:fontFamily="@font/poppins"
+            android:text="Sign up with email address"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:boxCornerRadiusTopStart="16.90dp"
+            app:boxCornerRadiusTopEnd="16.90dp"
+            app:boxCornerRadiusBottomStart="16.90dp"
+            app:boxCornerRadiusBottomEnd="16.90dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/baseline_email_24"
+                android:hint="Email address"
+                android:id="@+id/tv_email_address"
+                android:drawablePadding="9.10dp"
+                android:drawableTint="@color/black"
+                android:fontFamily="@font/poppins"
+                android:inputType="textEmailAddress">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:boxCornerRadiusTopStart="16.90dp"
+            app:boxCornerRadiusTopEnd="16.90dp"
+            app:boxCornerRadiusBottomStart="16.90dp"
+            app:boxCornerRadiusBottomEnd="16.90dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/baseline_password_24"
+                android:hint="Password"
+                android:id="@+id/tv_password"
+                android:drawablePadding="9.10dp"
+                android:drawableTint="@color/black"
+                android:fontFamily="@font/poppins"
+                android:inputType="textPassword">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:boxCornerRadiusTopStart="16.90dp"
+            app:boxCornerRadiusTopEnd="16.90dp"
+            app:boxCornerRadiusBottomStart="16.90dp"
+            app:boxCornerRadiusBottomEnd="16.90dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/baseline_password_24"
+                android:hint="Confirm Password"
+                android:id="@+id/tv_confirm_password"
+                android:drawablePadding="9.10dp"
+                android:drawableTint="@color/black"
+                android:fontFamily="@font/poppins"
+                android:inputType="textPassword">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/resendVerificationEmailBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend Verification Email"
+            android:visibility="gone"
+            android:layout_gravity="end"
+            android:textColor="#ffffff"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins"
+            android:backgroundTint="#df3343"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sign_up_btn"
+            android:text="Sign Up"
+            android:backgroundTint="#DF3343"
+            android:textColor="@color/button"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins"
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="Already Registered ?"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sign_in_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="@android:color/transparent"
+                android:text="Sign In here"
+                android:textColor="#DF3343"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

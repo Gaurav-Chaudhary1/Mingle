@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@color/white">
+
+    <!-- App Icon -->
+    <ImageView
+        android:id="@+id/notification_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/notifications"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Notification Icon"/>
+
+    <!-- Title of Notification -->
+    <TextView
+        android:id="@+id/notification_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Message"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@id/notification_icon"/>
+
+    <!-- Message of Notification -->
+    <TextView
+        android:id="@+id/notification_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You've received a new message!"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/notification_title"
+        android:layout_toEndOf="@id/notification_icon"/>
+
+    <!-- Timestamp -->
+    <TextView
+        android:id="@+id/notification_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:30 AM"
+        android:textSize="12sp"
+        android:textColor="@color/grey"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@id/notification_title"/>
+
+    <!-- Notification Status Indicator -->
+    <View
+        android:id="@+id/notification_status_indicator"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="8dp"
+        android:background="#df3343"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toEndOf="@id/notification_time"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:layout_alignTop="@id/notification_title"
+        android:layout_alignBottom="@id/notification_time"
+        android:backgroundTint="#df3343" />
+
+</RelativeLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.soulmate.navigation.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_reelsFragment"
+            app:destination="@id/reelsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.soulmate.navigation.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chatFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/chatFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_chatFragment_to_userChatActivity"
+            app:destination="@id/userChatActivity"/>
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.soulmate.navigation.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_filteredProfilesFragment"
+            app:destination="@id/filteredProfilesFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/searchFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <dialog
+        android:id="@+id/addFragment"
+        android:name="com.example.soulmate.navigation.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/reelsFragment"
+        android:name="com.example.soulmate.navigation.ReelsFragment"
+        android:label="fragment_reels"
+        tools:layout="@layout/fragment_reels" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.soulmate.navigation.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" >
+        <action
+            android:id="@+id/action_userProfileFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/userProfileFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shortsFragment"
+        android:name="com.example.soulmate.tabfragments.ShortsFragment"
+        android:label="fragment_shorts"
+        tools:layout="@layout/fragment_shorts" >
+        <action
+            android:id="@+id/action_shortsFragment_to_reelsFragment"
+            app:destination="@id/reelsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filteredProfilesFragment"
+        android:name="com.example.soulmate.navigation.FilteredProfilesFragment"
+        android:label="fragment_filtered_profiles"
+        tools:layout="@layout/fragment_filtered_profiles" >
+        <action
+            android:id="@+id/action_filteredProfilesFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:popUpTo="@id/filteredProfilesFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <activity
+        android:id="@+id/userChatActivity"
+        android:name="com.example.soulmate.activities.UserChatActivity"
+        android:label="activity_user_chat"
+        tools:layout="@layout/activity_user_chat" />
+</navigation>

@@ -1,0 +1,21 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:clickable="true"
+    android:focusable="true">
+
+        <!-- User post image -->
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="180dp"
+            android:layout_height="200dp"
+            android:src="@drawable/baseline_person_24"
+            android:scaleType="fitXY"
+            android:contentDescription="User Post Image" />
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".navigation.HomeFragment">
+
+    <!-- Toolbar remains fixed at the top -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Instagram-like logo -->
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold_italic"
+            android:text="Mingle"
+            android:textColor="#DE3343"
+            android:textSize="36sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <!-- Right-aligned icons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal">
+
+            <!-- Chat/Message icon -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/notificationAnimation"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:lottie_rawRes="@raw/notification"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="false"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center"
+                android:contentDescription="Lottie Animation"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/messageAnimation"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:lottie_rawRes="@raw/message"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="false"
+                android:contentDescription="Lottie Animation"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Scrollable content below the toolbar -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- LinearLayout as ScrollView's direct child -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ConstraintLayout for fine-grained control of elements inside LinearLayout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <!-- RecyclerView for Status -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="Status"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="4dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:listitem="@layout/item_status" />
+
+                <!-- RecyclerView for Posts -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_posts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_view_status"
+                    tools:listitem="@layout/item_post" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

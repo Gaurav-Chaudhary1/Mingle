@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SoulMate"
+        tools:targetApi="31">
+        <activity
+            android:name=".activities.UserAllReelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.UserAllPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.BuyMembershipActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AccountStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.PostDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.UserChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MatchingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.NextUserProfile"
+            android:exported="false" />
+        <activity
+            android:name=".activities.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ReelsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.PostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SettingActivity"
+            android:exported="false" /> <!-- Facebook SDK Initialization -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+        <activity
+            android:name=".activities.UserMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AuthMainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

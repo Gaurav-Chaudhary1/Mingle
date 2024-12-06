@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- User's Profile Image -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/edt_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/user_pro"
+            app:civ_border_color="#E6E0E2"
+            app:civ_border_width="2dp" />
+
+        <!-- User's Name -->
+        <TextView
+            android:id="@+id/textViewUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <!-- Comment Text -->
+    <TextView
+        android:id="@+id/textViewComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:paddingStart="8dp"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <!-- Optional: Timestamp -->
+    <TextView
+        android:id="@+id/textViewTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewComment"
+        android:textColor="@color/gray"
+        android:textSize="12sp"
+        android:paddingTop="2dp" />
+
+    <!-- Delete Comment Button -->
+    <ImageButton
+        android:id="@+id/buttonDeleteComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:background="@android:drawable/ic_menu_delete"
+        android:contentDescription="Delete comment" />
+</RelativeLayout>

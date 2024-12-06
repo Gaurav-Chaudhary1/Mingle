@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="150dp"
+    android:layout_height="230dp"
+    android:layout_margin="8dp"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <!-- Root Layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/com_facebook_profile_picture_blank_square" />
+
+        <!-- Dark Overlay for Text Readability -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66000000" />
+
+        <!-- User Name and Age -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvUserAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="25"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+        </LinearLayout>
+
+<!--        &lt;!&ndash; Message Button &ndash;&gt;-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/btnMessage"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:backgroundTint="@android:color/transparent"-->
+<!--            android:src="@drawable/messages"-->
+<!--            app:tint="@color/white" />-->
+
+<!--        &lt;!&ndash; Online Status Indicator &ndash;&gt;-->
+<!--        <View-->
+<!--            android:id="@+id/onlineStatus"-->
+<!--            android:layout_width="12dp"-->
+<!--            android:layout_height="12dp"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:background="@drawable/green_dot" />-->
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

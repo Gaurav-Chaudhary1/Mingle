@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    android:background="@color/white"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Option Icon (on the left side) -->
+        <ImageView
+            android:id="@+id/iv_option_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="Image icon"
+            android:src="@drawable/camera_svgrepo_com"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="center"/>
+
+        <!-- Option Title -->
+        <TextView
+            android:id="@+id/tv_option_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Option Title"
+            android:textColor="#ff000000"
+            android:textSize="18sp"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold"/>
+
+        <!-- Arrow Icon (optional for indicating navigation) -->
+        <ImageView
+            android:id="@+id/iv_arrow_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:contentDescription="Arrow icon"
+            android:src="@drawable/arrow_forward"
+            app:tint="@color/black" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

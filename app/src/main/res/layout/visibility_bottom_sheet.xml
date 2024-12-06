@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Who can see your post?"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins"
+        android:textSize="16sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/edt_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/gray"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/globe"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anyone"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins"
+            android:textSize="16sp"
+            android:layout_marginStart="24dp"/>
+
+        <RadioButton
+            android:id="@+id/anyone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="152dp"
+            android:buttonTint="#e75748" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/profile_image2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/friends"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friends only"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins"
+            android:textSize="16sp"
+            android:layout_marginStart="24dp"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:id="@+id/friends"
+            android:buttonTint="#e75748"
+            android:layout_marginStart="117dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

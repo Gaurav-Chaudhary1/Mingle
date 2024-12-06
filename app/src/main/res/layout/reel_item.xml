@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff000000">
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:keepScreenOn="true"
+        android:backgroundTint="#ff000000"
+        app:next_icon="@android:color/transparent"
+        app:previous_icon="@android:color/transparent"
+        app:show_buffering="when_playing"
+        app:show_timeout="1000"/>
+
+    <ProgressBar
+        android:id="@+id/loadingProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <!-- No Internet Message -->
+    <TextView
+        android:id="@+id/noInternetMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Check your internet connection"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <!-- Shorts User Info -->
+    <LinearLayout
+        android:id="@+id/reelUserInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/user_profile_svgrepo_com"
+            app:civ_border_color="#E6E0E2"
+            app:civ_border_width="2dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/reelBio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is a shorts bio"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Like, Share, Download, Save buttons -->
+    <LinearLayout
+        android:id="@+id/reelActions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="160dp"
+        android:layout_marginEnd="14dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/likeButtonAnimation"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            app:lottie_rawRes="@raw/like_button"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            android:contentDescription="Lottie Animation"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/likeBtnCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/shareButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/share" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/downloadButtonLottie"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:lottie_rawRes="@raw/download"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="false"
+            android:background="@android:color/transparent"
+            android:contentDescription="Lottie Animation"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <ImageView
+            android:id="@+id/saveButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/save2" />
+    </LinearLayout>
+
+</RelativeLayout>

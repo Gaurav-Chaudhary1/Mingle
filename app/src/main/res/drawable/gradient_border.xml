@@ -1,0 +1,13 @@
+<!-- res/drawable/gradient_border.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:angle="45"
+                android:endColor="#FFDC80"
+                android:startColor="#F58529"
+                android:centerColor="#DD2A7B"
+                android:type="sweep" />
+        </shape>
+    </item>
+</layer-list>

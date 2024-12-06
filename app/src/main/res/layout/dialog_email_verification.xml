@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/dialog_background"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/iv_success"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_check_circle"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_dialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A Verification Link has been sent to your Email ID, Please verify to proceed."
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:visibility="gone"
+        android:backgroundTint="#df3343"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

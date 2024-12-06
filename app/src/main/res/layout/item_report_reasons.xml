@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Title for the report dialog -->
+    <TextView
+        android:id="@+id/reportTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Report Reason"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Reason options as radio buttons within a RadioGroup -->
+    <RadioGroup
+        android:id="@+id/reasonGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reportTitle">
+
+        <RadioButton
+            android:id="@+id/reasonInappropriate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inappropriate Content" />
+
+        <RadioButton
+            android:id="@+id/reasonSpam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spam" />
+
+        <RadioButton
+            android:id="@+id/reasonHarassment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harassment or Hate Speech" />
+
+        <RadioButton
+            android:id="@+id/reasonMisinformation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Misinformation" />
+
+        <RadioButton
+            android:id="@+id/reasonOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other" />
+
+    </RadioGroup>
+
+    <!-- Optional input field for 'Other' reason -->
+    <EditText
+        android:id="@+id/otherReasonInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Please specify"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reasonGroup" />
+
+    <!-- Report button -->
+    <Button
+        android:id="@+id/reportButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#df3343"
+        android:text="Report"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otherReasonInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

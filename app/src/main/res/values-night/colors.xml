@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FFFFFFFF</color>
+    <color name="white">#FF000000</color>
+    <color name="grey">#C8C5C5</color>
+    <color name="button">#FFFFFF</color>
+    <color name="chat_rv_color">#FF000000</color>
+
+    //night theme radio button colors
+    <color name="colorPrimary">#BB86FC</color> <!-- A lighter purple for better visibility -->
+    <color name="colorAccent">#FF80AB</color> <!-- A softer pink accent -->
+    <color name="gray">#757575</color><!-- A medium gray that’s more visible on a dark background -->
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color><!-- A medium gray that’s more visible on a dark background -->
+
+</resources>

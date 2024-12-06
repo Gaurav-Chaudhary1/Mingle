@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#555454</color>
+    <color name="button">#FFFFFF</color>
+    <color name="chat_rv_color">#F1EFEF</color>
+
+    //custom radio button colors
+    <color name="colorPrimary">#6200EA</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+
+</resources>

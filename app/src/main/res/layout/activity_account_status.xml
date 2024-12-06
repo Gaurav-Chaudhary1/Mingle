@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_account_status_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Status"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Status Icon -->
+    <ImageView
+        android:id="@+id/iv_account_status_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/bc_guidelines"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_account_status_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Status Message -->
+    <TextView
+        android:id="@+id/tv_account_status_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You are following all our community guidelines!"
+        android:textSize="18sp"
+        android:textColor="#4CAF50"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_account_status_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Additional Message -->
+    <TextView
+        android:id="@+id/tv_additional_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Thank you for being a responsible member of our community."
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_account_status_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"/>
+
+    <!-- Button to Go Back -->
+    <Button
+        android:id="@+id/btn_go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Settings"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_additional_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.EditProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/edt_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:title="Edit profile"
+        style="@style/Widget.MaterialComponents.Toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/edt_profile"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/user_pro"
+                    app:civ_border_color="#E6E0E2"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_edit"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/plus"
+                    app:civ_border_color="#E6E0E2"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintBottom_toBottomOf="@id/edt_profile"
+                    app:layout_constraintEnd_toEndOf="@id/edt_profile"
+                    app:layout_constraintStart_toStartOf="@id/edt_profile"
+                    app:layout_constraintTop_toTopOf="@id/edt_profile"
+                    app:layout_constraintHorizontal_bias="0.94"
+                    app:layout_constraintVertical_bias="0.90"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                app:boxCornerRadiusTopStart="16.90dp"
+                app:boxCornerRadiusTopEnd="16.90dp"
+                app:boxCornerRadiusBottomStart="16.90dp"
+                app:boxCornerRadiusBottomEnd="16.90dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username (e.g: @text.text)"
+                    android:id="@+id/edt_username"
+                    android:drawablePadding="9.10dp"
+                    android:drawableTint="@color/black"
+                    android:fontFamily="@font/poppins"
+                    android:inputType="textPersonName">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                app:boxCornerRadiusBottomEnd="16.90dp"
+                app:boxCornerRadiusBottomStart="16.90dp"
+                app:boxCornerRadiusTopEnd="16.90dp"
+                app:boxCornerRadiusTopStart="16.90dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="9.10dp"
+                    android:drawableTint="@color/black"
+                    android:hint="Full Name"
+                    android:inputType="text"
+                    android:textColor="@color/black">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                app:boxCornerRadiusBottomEnd="16.90dp"
+                app:boxCornerRadiusBottomStart="16.90dp"
+                app:boxCornerRadiusTopEnd="16.90dp"
+                app:boxCornerRadiusTopStart="16.90dp"
+                app:helperText="Describe yourself in up to 200 characters"
+                app:helperTextTextColor="@color/black"
+                app:counterEnabled="true"
+                app:counterMaxLength="200">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_bio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="9.10dp"
+                    android:drawableTint="@color/black"
+                    android:hint="Bio"
+                    android:inputType="textMultiLine"
+                    android:maxLength="200"
+                    android:maxLines="4"
+                    android:padding="12dp"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/black" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Interests Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Add Interests"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <!-- TextInput for adding new interests -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxCornerRadiusBottomEnd="16.90dp"
+                app:boxCornerRadiusBottomStart="16.90dp"
+                app:boxCornerRadiusTopEnd="16.90dp"
+                app:boxCornerRadiusTopStart="16.90dp"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_interest_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Type an interest and press enter"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Chip Group for selected interests -->
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_selected_interests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:chipSpacingHorizontal="8dp"
+                app:chipSpacingVertical="4dp"/>
+
+            <!-- Predefined Interests Chips -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Select from popular interests"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_predefined_interests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:chipSpacingHorizontal="8dp"
+                app:chipSpacingVertical="4dp">
+
+                <!-- Predefined Chips -->
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Music Lovers"
+                    android:checkable="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adventurers"
+                    android:checkable="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pet Lover"
+                    android:checkable="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Foodie"
+                    android:checkable="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book Lover"
+                    android:checkable="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sarcastic"
+                    android:checkable="true" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Date of Birth -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:boxCornerRadiusBottomEnd="16.90dp"
+                app:boxCornerRadiusBottomStart="16.90dp"
+                app:boxCornerRadiusTopEnd="16.90dp"
+                app:boxCornerRadiusTopStart="16.90dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="9.10dp"
+                    android:drawableTint="@color/black"
+                    android:focusable="false"
+                    android:hint="Date of Birth (DD/MM/YYYY)"
+                    android:textColor="@color/black" />  <!-- Prevent keyboard from showing -->
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Gender Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins"
+                android:text="Gender"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/gender_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_radio_button_male"
+                    android:button="@null"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/baseline_male_24"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:text="Male"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Female Option -->
+                <RadioButton
+                    android:id="@+id/radio_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:background="@drawable/custom_radio_button_female"
+                    android:button="@null"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/baseline_female_24"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:text="Female"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <!-- Other Option -->
+                <RadioButton
+                    android:id="@+id/radio_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:background="@drawable/custom_radio_button_other"
+                    android:button="@null"
+                    android:drawableStart="@drawable/other_gender"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:padding="16dp"
+                    android:layout_weight="1"
+                    android:text="Other"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </RadioGroup>
+
+            <!-- Address -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:boxCornerRadiusBottomEnd="16.90dp"
+                app:boxCornerRadiusBottomStart="16.90dp"
+                app:boxCornerRadiusTopEnd="16.90dp"
+                app:boxCornerRadiusTopStart="16.90dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="9.10dp"
+                    android:drawableTint="@color/black"
+                    android:hint="Country"
+                    android:inputType="textPostalAddress"
+                    android:textColor="@color/black">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/edt_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#DF3343"
+                android:fontFamily="@font/poppins"
+                android:text="Save"
+                android:textColor="@color/button" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

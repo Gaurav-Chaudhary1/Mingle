@@ -1,0 +1,37 @@
+<!-- item_image_picker.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="8dp">
+
+    <!-- ImageView with rounded corners for images -->
+    <ImageView
+        android:id="@+id/idIVOriginalShorts"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="5dp"
+        android:background="@drawable/rounded_image_background"
+        android:src="@drawable/photo_placeholder" />
+
+    <!-- Add Image Button -->
+    <ImageView
+        android:id="@+id/idIVOriginalAdd"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="5dp"
+        android:background="@drawable/rounded_add_button_background"
+        android:src="@drawable/image_gallery" />
+
+</LinearLayout>

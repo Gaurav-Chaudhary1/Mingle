@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- User Profile Image -->
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="Profile Image"
+            android:scaleType="fitXY" />
+
+        <!-- User Name -->
+        <TextView
+            android:id="@+id/userNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="User Name"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <!-- User Address -->
+        <TextView
+            android:id="@+id/userAddressTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="User Address"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp" />
+
+        <!-- User Followers Count -->
+        <TextView
+            android:id="@+id/userFollowersTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="Followers: 0"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/mostLikedTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/border_background"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Most Liked User"
+            android:textColor="#FF5722"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

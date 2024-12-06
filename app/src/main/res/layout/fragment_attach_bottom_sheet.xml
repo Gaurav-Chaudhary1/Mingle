@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".fragments.AttachBottomSheetFragment">
+
+    <TextView
+        android:id="@+id/share_image_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share Image"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:textColor="?android:attr/textColorPrimary" />
+
+    <TextView
+        android:id="@+id/share_video_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share Video"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:textColor="?android:attr/textColorPrimary" />
+
+</LinearLayout>
